@@ -1,5 +1,6 @@
 from Carro import Carro
 from Moto import Moto
+from Roda import Roda
 
 lstVeiculos = []
 
@@ -18,14 +19,23 @@ def listaVeiculos(lstVeiculos):
         
 
 def criaVeiculos(qtd,tipo):
-	for i in range(qtd):
-		if tipo.lower() == 'carro':
-			lstVeiculos.append(Carro("kkk-0123"))
-		elif tipo.lower() == 'moto':
-			lstVeiculos.append(Moto("abc-0022"))
-		else:
-			pass
-	listaVeiculos(lstVeiculos)
+        for i in range(qtd):
+                if tipo.lower() == 'carro':
+                    carro = Carro("kkk-0123")
+                    for i in range(carro.getMaxRodas()):
+                        roda = Roda(14)
+                        carro.addRoda(roda)
+                        lstVeiculos.append(carro)
+                elif tipo.lower() == 'moto':
+                    moto = Moto("abc-0022")
+                    for i in range(moto.getMaxRodas()):
+                        roda = Roda(14)
+                        carro.addRoda(roda)
+                    lstVeiculos.append(moto)
+                        
+                else:
+                        pass
+        listaVeiculos(lstVeiculos)
 
 while True:
     print("Se desejar, crie um veículo")

@@ -13,5 +13,5 @@ class Carro(Veiculo):
         self.maxRodas = maxRodas
         
     def addRoda(self,roda):
-        if self.getNumRodas() <= self.maxRodas():
+        if self.getNumRodas() <= self.getMaxRodas():
             self.rodas.append(roda)

@@ -1,5 +1,5 @@
 class Roda():
-    def __init__(aro):
+    def __init__(self,aro):
         self.aro = aro
 
     def setAro(self,aro):
