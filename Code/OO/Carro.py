@@ -5,6 +5,7 @@ class Carro(Veiculo):
         self.setPlaca(placa)
         self.rodas = []
         self.setMaxRodas(4)
+        self.setTipoVeiculo("Carro")
     
     def getMaxRodas(self):
         return self.maxRodas
@@ -15,3 +16,9 @@ class Carro(Veiculo):
     def addRoda(self,roda):
         if self.getNumRodas() <= self.getMaxRodas():
             self.rodas.append(roda)
+
+    def setTipoVeiculo(self,tipoVeiculo):
+        self.tipoVeiculo = tipoVeiculo
+
+    def getTipoVeiculo(self):
+        return self.tipoVeiculo

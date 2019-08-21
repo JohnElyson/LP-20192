@@ -6,6 +6,7 @@ class Moto(Veiculo):
         self.setPlaca(placa)
         self.rodas = []
         self.setMaxRodas(2)
+        self.setTipoVeiculo("Moto")
     
     def getMaxRodas(self):
         return self.maxRodas
@@ -14,5 +15,11 @@ class Moto(Veiculo):
         self.maxRodas = maxRodas
     
     def addRoda(self,roda):
-        if self.getNumRodas() <= self.maxRodas():
+        if self.getNumRodas() <= self.getMaxRodas():
             self.rodas.append(roda)
+
+    def setTipoVeiculo(self,tipoVeiculo):
+        self.tipoVeiculo = tipoVeiculo
+
+    def getTipoVeiculo(self):
+        return self.tipoVeiculo
